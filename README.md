@@ -8,9 +8,7 @@ Based heavily on the scripts written by Paul Branson using Shifter (https://gith
 The approach is to run two separate jobs: one running Jupyter lab and the dask-scheduler; one running the dask workers. This way workers can be added to the scheduler as required.
 
 ### Start Jupyter and Dask scheduler
-Run `sbatch start_jupyter.sh`
-
-This does a few things:
+Run `sbatch start_jupyter.sh`. This does a few things:
 1. Build the Singularity image in `/group/$PAWSEY_PROJECT/singularity/groupRepository` if the image does not already exist
 2. Start an instance of the container running a `dask-scheduler`. The `dask-scheduler` instance is instructed to write `$MYSCRATCH/scheduler.json` to communicate the scheduler location to the workers
 3. Start an instance on the container running Jupyter Lab
@@ -19,9 +17,7 @@ This does a few things:
 Follow the instructions output by `start_jupyter.sh` to tunnel into your Jupyter Lab instance (for now, I have set this up so that users will find themselves in `${MYSCRATCH}/sandpit`).
 
 ### Start dask workers
-Run `sbatch start_worker.sh`
-
-This starts an instance of the container running `dask-worker`, spec'd using the SLURM environment variables.
+Run `sbatch start_worker.sh`. This starts an instance of the container running `dask-worker`, spec'd using the SLURM environment variables.
 
 Once this job has left the queue, you should have access to these workers within your python environment.
 
