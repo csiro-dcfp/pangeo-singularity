@@ -29,7 +29,7 @@ client = Client(scheduler_file='$MYSCRATCH/scheduler.json')
 ```
 (Note the `Client` widget did not work for me, but otherwise things seem to be functioning well)
 
-Hopefully you can now use dask to analyses data on Pawsey. Please let me know how you go!
+Hopefully you can now use dask to analyse data on Pawsey. Please let me know how you go!
 
 ## Useful links
 https://support.pawsey.org.au/documentation/display/US/Containers
