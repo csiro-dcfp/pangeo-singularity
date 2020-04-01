@@ -4,8 +4,8 @@ Scripts to run dask and jupyter lab on SLURM hpc using Singularity
 Based heavily on the scripts written by Paul Branson using Shifter (https://github.com/pbranson/pangeo-hpc-shifter/blob/master/start_jupyter.sh) and the scripts provided by Pawsey for running Jupyter lab on Zeus with Singularity (https://support.pawsey.org.au/documentation/display/US/Running+JupyterHub+on+Zeus+with+Singularity).
 
 The approach is to run two separate jobs:
-| `start_jupyter.sh` starts Jupyter and the dask-scheduler
-| `start_worker.sh` starts the dask workers
+> `start_jupyter.sh` starts Jupyter and the dask-scheduler
+> `start_worker.sh` starts the dask workers
 
 
 
