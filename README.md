@@ -27,7 +27,7 @@ To establish a `Client` for your scheduler within your python environment (on Ju
 from dask.distributed import Client
 client = Client(scheduler_file='$MYSCRATCH/scheduler.json')
 ```
-(Note the `Client` widget did not work for me, but otherwise thing seem to be functioning well)
+(Note the `Client` widget did not work for me, but otherwise things seem to be functioning well)
 
 Hopefully you can now use dask to analyses data on Pawsey. Please let me know how you go!
 
