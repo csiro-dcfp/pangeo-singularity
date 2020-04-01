@@ -11,7 +11,7 @@ The approach is to run two separate jobs: one running Jupyter lab and the dask-s
 Run `sbatch start_jupyter.sh`. This does a few things:
 1. Build the Singularity image in `/group/$PAWSEY_PROJECT/singularity/groupRepository` if the image does not already exist
 2. Start an instance of the container running a `dask-scheduler`. The `dask-scheduler` instance is instructed to write `$MYSCRATCH/scheduler.json` to communicate the scheduler location to the workers
-3. Start an instance on the container running Jupyter Lab
+3. Start an instance of the container running Jupyter Lab
 4. Parses the log files to print out a helpful string for tunneling to the port exposed by Jupyter on the compute node. For now, you can find this information in the SLURM .out file that will getting written to the current directory once `start_jupyter.sh` leaves the queue.
 
 Follow the instructions output by `start_jupyter.sh` to tunnel into your Jupyter Lab instance (for now, I have set this up so that users will find themselves in `${MYSCRATCH}/sandpit`).
@@ -29,7 +29,7 @@ client = Client(scheduler_file='$MYSCRATCH/scheduler.json')
 ```
 (Note the `Client` widget did not work for me, but otherwise things seem to be functioning well)
 
-Hopefully you can now use dask to analyse data on Pawsey. Please let me know how you go!
+Hopefully you can now use dask to analyse data on Pawsey. For example, try moving `test.ipynb` to you sandpit area and running this. Please let me know how you go!
 
 ## Useful links
 https://support.pawsey.org.au/documentation/display/US/Containers
