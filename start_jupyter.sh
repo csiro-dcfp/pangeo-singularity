@@ -94,7 +94,9 @@ let LOCALHOST_PORT=$PORT
 # Start the Jupyter notebook -----
 HOST=$(hostname)
 HOSTIP=$(hostname -i)
-LOGFILE=$MYSCRATCH/pangeo_jupyter_log.$(date +%Y%m%dT%H%M%S)
+logDirectory="$MYSCRATCH/logs"
+mkdir -p $logDirectory
+LOGFILE=$logDirectory/pangeo_jupyter_log.$(date +%Y%m%dT%H%M%S)
 echo -e "Starting jupyter notebook (logging jupyter notebook session on ${HOST} to ${LOGFILE})...\n"
 #srun --export=ALL -n 1 -N 1 -c $SLURM_CPUS_PER_TASK \
 singularity exec -C -B ${userDirectory}:/home/joyvan -B ${userDirectory}:$HOME ${imagename} \
