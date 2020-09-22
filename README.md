@@ -1,5 +1,7 @@
+# Note, these scripts have not been updated in a while. Please first go to https://github.com/csiro-dcfp/pangeo_hpc and see if this scratches your pangeo itch.
+
 # pangeo-singularity
-Scripts to run dask and jupyter lab on SLURM hpc using Singularity
+Scripts to run dask and jupyter lab on SLURM hpc using Singularity.
 
 Based heavily on the scripts written by Paul Branson using Shifter (https://github.com/pbranson/pangeo-hpc-shifter/blob/master/start_jupyter.sh) and the scripts provided by Pawsey for running Jupyter lab on Zeus with Singularity (https://support.pawsey.org.au/documentation/display/US/Running+JupyterHub+on+Zeus+with+Singularity). Currently using a Docker image created by Richard Matear: `docker://matear/pangeo-mac:mod1` (this is a modification of the pangeo-notebook image that is curated at https://github.com/pangeo-data/pangeo-stacks).
 
